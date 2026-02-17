@@ -1,105 +1,99 @@
-// IT-2660 - Lab 1
-// Student Name: Adam Al-Rousan
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.Iterator;
 
 public class Main {
+
     public static void main(String[] args) {
-
-        // Create array
-        int[] nums = {5, 9, 3, 12, 7, 3, 11, 5};
-
-        Lab1 lab = new Lab1();
-
-        // Output array in order using a while loop
-        System.out.println("Array in order:");
-        int i = 0;
-        while (i < nums.length) {
-            System.out.print(nums[i] + " ");
-            i++;
-        }
-        System.out.println();
-
-        // Output array in reverse using a for loop
-        System.out.println("Array in reverse:");
-        for (int j = nums.length - 1; j >= 0; j--) {
-            System.out.print(nums[j] + " ");
-        }
-        System.out.println();
-
-        // Output first and last values
-        System.out.println("First value: " + nums[0]);
-        System.out.println("Last value: " + nums[nums.length - 1]);
-
-        // Call Lab1 methods
-        System.out.println("Max of 5 and 9: " + lab.max(5, 9));
-        System.out.println("Min of 5 and 9: " + lab.min(5, 9));
-        System.out.println("Sum of array: " + lab.sum(nums));
-        System.out.println("Average of array: " + lab.average(nums));
-        System.out.println("Max in array: " + lab.max(nums));
-        System.out.println("Min in array: " + lab.min(nums));
-    }
-}
-
-// Add all of the methods here
-class Lab1 {
-
-    // Provided method
-    public int increment(int num) {
-        return ++num;
+        linkedList();
+        queue();
+        stack();
     }
 
-    // Return max of two ints (if-statement)
-    public int max(int a, int b) {
-        if (a > b) {
-            return a;
+    public static void linkedList() {
+        // 1. Make a LinkedList to store programming languages
+        LinkedList<String> progLanguages = new LinkedList<>();
+
+        // 2. Add some popular programming languages to the list
+        progLanguages.add("Java");
+        progLanguages.add("Python");
+        progLanguages.add("JavaScript");
+        progLanguages.add("C++");
+
+        // 3. Remove "C++" from the list since we don’t need it
+        progLanguages.remove("C++");
+
+        // 4. Add "HTML" at the 3rd spot (index 2)
+        progLanguages.add(2, "HTML");
+
+        // 5. Go through the list and print out each language
+        Iterator<String> iterator = progLanguages.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
-        return b;
     }
 
-    // Return min of two ints (if-statement)
-    public int min(int a, int b) {
-        if (a < b) {
-            return a;
+    public static void queue() {
+        // 6. Make a queue to store some names
+        Queue<String> q = new LinkedList<>();
+
+        // 7. Add 5 names to the queue
+        q.add("Alice");
+        q.add("Bob");
+        q.add("Charlie");
+        q.add("Diana");
+        q.add("Ethan");
+
+        // 8. Print the whole queue to see what’s in it
+        System.out.println("Elements of queue: " + q);
+
+        // 9. Remove the first person in line and show who it was
+        String removedElement = q.poll();
+        System.out.println("Removed element: " + removedElement);
+
+        // 10. Check who is next in line without removing them
+        System.out.println("Head of queue: " + q.peek());
+
+        // 11. Print out everyone left in the queue
+        for (String element : q) {
+            System.out.println(element);
         }
-        return b;
     }
 
-    // Return sum of array
-    public int sum(int[] nums) {
-        int total = 0;
-        for (int num : nums) {
-            total += num;
-        }
-        return total;
-    }
+    public static void stack() {
+        // 13. Make a stack to store book titles
+        Stack<String> bookStack = new Stack<>();
 
-    // Return average using foreach loop
-    public double average(int[] nums) {
-        int total = 0;
-        for (int num : nums) {
-            total += num;
-        }
-        return (double) total / nums.length;
-    }
+        // 14. Put some books on the stack
+        bookStack.push("Clean Code");
+        bookStack.push("Design Patterns");
+        bookStack.push("Pragmatic Programmer");
 
-    // Return max in array using for loop
-    public int max(int[] nums) {
-        int max = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] > max) {
-                max = nums[i];
-            }
-        }
-        return max;
-    }
+        // 15. Take off the top book and print it
+        String poppedBook = bookStack.pop();
+        System.out.println("Popped book: " + poppedBook);
 
-    // Return min in array using for loop
-    public int min(int[] nums) {
-        int min = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < min) {
-                min = nums[i];
-            }
+        // 16. Look at the top book without removing it
+        System.out.println("Top book after pop: " + bookStack.peek());
+
+        // 17. Add another book on top
+        bookStack.push("Web DB Technologies");
+
+        // 18. Look at the top book again
+        System.out.println("Top book after push: " + bookStack.peek());
+
+        // 19. See where "Design Patterns" is in the stack
+        int position = bookStack.search("Design Patterns");
+        System.out.println("\"Design Patterns\" position in stack: " + position);
+
+        // 20. Check if the stack is empty
+        System.out.println("Is the stack empty? " + bookStack.empty());
+
+        // 21. Print all the books currently in the stack
+        System.out.println("All books in stack:");
+        for (String book : bookStack) {
+            System.out.println(book);
         }
-        return min;
     }
 }
