@@ -3,8 +3,7 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.Iterator;
 
-public class Main {
-
+public class Lab2 {
     public static void main(String[] args) {
         linkedList();
         queue();
