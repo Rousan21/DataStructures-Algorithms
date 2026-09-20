@@ -1,31 +1,51 @@
 # Data Structures and Algorithms
 
-This repository contains Java implementations and exercises focused on fundamental data structures and algorithms.
+Java coursework and practice focused on fundamental data structures, algorithms, and algorithmic problem solving.
 
-## Topics
+## Topics Covered
 
-The repository includes coursework and practice involving concepts such as:
+### Lab 2 — Linked Lists, Queues, and Stacks
 
-* Arrays and basic algorithms
-* Sorting and searching
-* Object-oriented programming
-* Graphs
-* Graph traversal
-* Data structure implementation
-* Algorithm problem solving
+Practice using Java's `LinkedList`, `Queue`, and `Stack` data structures.
 
-## Language
+### Lab 3 — Pattern Matching
+
+Implementation of a basic string-pattern matching algorithm with timing comparisons for best- and worst-case inputs.
+
+### Lab 4 — Sorting Algorithms
+
+Implementation and comparison of:
+
+* Bubble Sort
+* Insertion Sort
+
+The program reads integer data from a file and sorts the values using both algorithms.
+
+### Lab 5 — Binary Search Trees
+
+Implementation and practice with binary search tree operations and tree structures.
+
+### Lab 6 — Hash Maps
+
+Implementation of a custom hash map and map interface in Java.
+
+### Lab 7 — Graphs
+
+Practice implementing graph structures using vertices, edges, and graph traversal concepts.
+
+## Additional Practice
+
+### Linear Search
+
+`Execution.java` contains a basic linear search implementation and measures its execution time.
+
+## Technologies
 
 * Java
-
-## Repository Structure
-
-The repository contains multiple labs and practice exercises completed while studying data structures and algorithms.
-
-Each lab focuses on different concepts and implementations.
+* Object-Oriented Programming
+* Data Structures
+* Algorithm Analysis
 
 ## Purpose
 
-The goal of this repository is to document my progress learning data structures, algorithms, and algorithmic problem solving in Java.
-
-I plan to continue improving the organization of this repository and adding additional implementations as I study more advanced topics.
+This repository documents my progression through data structures and algorithms while building a stronger understanding of how common data structures and algorithms are implemented and analyzed.
